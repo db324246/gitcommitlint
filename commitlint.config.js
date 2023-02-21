@@ -26,8 +26,7 @@ module.exports = {
 	prompt: {
 		messages: { //  自定义命令行提问信息
 			type: "选择你要提交的类型 :",
-			subject: "填写简短精炼的变更描述 :\n",
-			confirmCommit: "是否提交或修改commit ?"
+			subject: "填写简短精炼的变更描述 :\n"
 		},
 		types: [ // 自定义选择类型提示
 			{ value: "feat", name: "feat:   :triangular_flag_on_post:  新增功能", emoji: ":triangular_flag_on_post:" },
@@ -36,5 +35,13 @@ module.exports = {
 			{ value: "style", name: "style:   🎨  代码格式（不影响功能，例如空格、分号等格式修正）", emoji: "🎨" }
 		],
 		useEmoji: true, // 是否开启 commit message 带有 Emoji 字符。
+		skipQuestions: [ // 跳过问题
+			'body',
+			'scope',
+			'footer',
+			'footerPrefix',
+			'confirmCommit',
+			'breaking'
+		]
 	}
 };
