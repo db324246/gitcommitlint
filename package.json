@@ -6,7 +6,7 @@
   "scripts": {
 		"lint:lint-staged": "lint-staged",
     "prepare": "husky install",
-		"commit": "git pull && git add -A && git-cz && git push"
+		"commit": "git pull origin master && git add -A && git-cz && git push origin master"
   },
   "keywords": [],
   "author": "",
